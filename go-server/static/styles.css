@@ -1,0 +1,91 @@
+
+/* styles.css - stub CSS for go-server
+	 Add real styles as needed. */
+
+:root {
+	--bg: #f7fafc;
+	--card: #ffffff;
+	--muted: #6b7280;
+	--accent: #2563eb;
+	--radius: 8px;
+	--shadow: 0 2px 8px rgba(16,24,40,0.06);
+	--max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	margin: 0;
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background: var(--bg);
+	color: #0f172a;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: 32px auto;
+	padding: 0 16px;
+}
+
+.card {
+	background: var(--card);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	padding: 20px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+h1, h2, h3 { margin: 0; }
+h1 { font-size: 1.5rem; }
+
+.muted { color: var(--muted); font-size: 0.9rem; }
+
+.btn {
+	display: inline-block;
+	padding: 8px 14px;
+	border-radius: 6px;
+	background: var(--accent);
+	color: white;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.btn.secondary {
+	background: transparent;
+	color: var(--accent);
+	border: 1px solid rgba(37,99,235,0.12);
+}
+
+form input, form textarea, .input {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #e6e9ef;
+	border-radius: 6px;
+	background: white;
+	font: inherit;
+}
+
+footer { text-align: center; padding: 24px 0; color: var(--muted); font-size: 0.9rem; }
+
+/* Responsive helpers */
+@media (max-width: 640px) {
+	.container { margin: 16px auto; }
+	h1 { font-size: 1.25rem; }
+}
+
+/* Utility classes */
+.flex { display: flex; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.center { display: grid; place-items: center; }
+
+/* End of stub */
